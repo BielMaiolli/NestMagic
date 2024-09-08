@@ -11,7 +11,7 @@ Comandos para essa aplicação:
 - npm i passport-jwt --save
 
 
-E por fim para rodar o projeto
+E por fim para rodar o projeto:
 
 - npm run start:dev
 
