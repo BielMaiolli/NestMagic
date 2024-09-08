@@ -14,3 +14,8 @@ Comandos para essa aplicação:
 E por fim para rodar o projeto
 
 - npm run start:dev
+
+
+Referencias para realização:
+- https://www.youtube.com/watch?v=4oLUddZVL80&list=PLdAEGQHOerPAMLdJim5Peryj6_2Q-477Z
+- https://docs.nestjs.com/
