@@ -4,6 +4,9 @@ import { Deck } from './schemas/deck.schema';
 import { createDeckDto } from './dto/create-deck.dto';
 import { updateDeckDto } from './dto/update-deck.dto';
 import { AuthGuard } from '@nestjs/passport';
+import { RolesGuard } from 'src/auth/guards/roles.guard';
+import { Roles } from 'src/auth/decorators/roles.decorator';
+import { Role } from 'src/auth/enums/role.enum';
 
 @Controller('deck')
 export class DeckController {
@@ -32,6 +35,8 @@ constructor(private deckService: DeckService) {}
    //////////////////////////////////////////////////////////////////////
 
   @Get('allDecks')
+  @Roles(Role.ADMIN)
+  @UseGuards(AuthGuard(), RolesGuard)
   async getAllDecks(): Promise<Deck[]> {
     return this.deckService.findAll()
   }
